@@ -21,21 +21,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:@"VirtualTourIOSDB.db"];
-    FMDatabase *db = [FMDatabase databaseWithPath:path];
+    NSString *databasePath = [[NSBundle mainBundle] pathForResource:@"VirtualTourIOSDB" ofType:@"db"];
+    FMDatabase *db = [FMDatabase databaseWithPath:databasePath];
    
     if (![db open]) {
         // [db release];   // uncomment this line in manual referencing code; in ARC, this is not necessary/permitted
         db = nil;
+        NSLog(@"Couldn't find db");
         return;
     }
-    FMResultSet *s = [db executeQuery:@"SELECT COUNT(*) FROM myTable"];
-    int totalCount = 0;
-    if ([s next]) {
-        totalCount = [s intForColumnIndex:0];
+    
+    
+
+    FMResultSet *s = [db executeQuery:@"SELECT * FROM VirtualTourIOSDatabase"];
+    
+   while([s next]) {
+        NSLog(@"Point with id: %d has title: %@ and major: %@.",
+              [s intForColumn:@"id"],
+              [s stringForColumn:@"title"],
+              [s stringForColumn:@"major"]);
     }
     
-    NSLog(@"index: %d\n", totalCount);
 }
 
 

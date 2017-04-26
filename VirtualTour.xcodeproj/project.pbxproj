@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6483EEDC86D27CC8983BFED2 /* Pods_VirtualTour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D0CEFFCE2A8F66546FB4E7 /* Pods_VirtualTour.framework */; };
+		EC0F97BB1EB033110049BE6A /* VirtualTourIOSDB.db in Resources */ = {isa = PBXBuildFile; fileRef = EC0F97BA1EB02D410049BE6A /* VirtualTourIOSDB.db */; };
 		ECFF28521EB029C00056E256 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFF28511EB029C00056E256 /* main.m */; };
 		ECFF28551EB029C00056E256 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFF28541EB029C00056E256 /* AppDelegate.m */; };
 		ECFF28581EB029C00056E256 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFF28571EB029C00056E256 /* ViewController.m */; };
@@ -278,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC0F97BB1EB033110049BE6A /* VirtualTourIOSDB.db in Resources */,
 				ECFF28601EB029C00056E256 /* LaunchScreen.storyboard in Resources */,
 				ECFF285D1EB029C00056E256 /* Assets.xcassets in Resources */,
 				ECFF285B1EB029C00056E256 /* Main.storyboard in Resources */,
