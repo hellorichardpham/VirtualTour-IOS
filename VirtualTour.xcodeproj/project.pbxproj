@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6483EEDC86D27CC8983BFED2 /* Pods_VirtualTour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D0CEFFCE2A8F66546FB4E7 /* Pods_VirtualTour.framework */; };
 		ECFF28521EB029C00056E256 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFF28511EB029C00056E256 /* main.m */; };
 		ECFF28551EB029C00056E256 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFF28541EB029C00056E256 /* AppDelegate.m */; };
 		ECFF28581EB029C00056E256 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFF28571EB029C00056E256 /* ViewController.m */; };
@@ -35,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20D0CEFFCE2A8F66546FB4E7 /* Pods_VirtualTour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtualTour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C6E771DB0CCAC1BDBCA1B28 /* Pods-VirtualTour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTour.release.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTour/Pods-VirtualTour.release.xcconfig"; sourceTree = "<group>"; };
+		43B65F1AE0090503F9C246F7 /* Pods-VirtualTour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTour/Pods-VirtualTour.debug.xcconfig"; sourceTree = "<group>"; };
+		EC0F97BA1EB02D410049BE6A /* VirtualTourIOSDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = VirtualTourIOSDB.db; sourceTree = "<group>"; };
 		ECFF284D1EB029C00056E256 /* VirtualTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFF28511EB029C00056E256 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECFF28531EB029C00056E256 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6483EEDC86D27CC8983BFED2 /* Pods_VirtualTour.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +84,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310CE03D2FFF84115AB344B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43B65F1AE0090503F9C246F7 /* Pods-VirtualTour.debug.xcconfig */,
+				3C6E771DB0CCAC1BDBCA1B28 /* Pods-VirtualTour.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		558DCE84B096F470EED2A21B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20D0CEFFCE2A8F66546FB4E7 /* Pods_VirtualTour.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ECFF28441EB029C00056E256 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +108,8 @@
 				ECFF28691EB029C00056E256 /* VirtualTourTests */,
 				ECFF28741EB029C00056E256 /* VirtualTourUITests */,
 				ECFF284E1EB029C00056E256 /* Products */,
+				310CE03D2FFF84115AB344B1 /* Pods */,
+				558DCE84B096F470EED2A21B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +131,7 @@
 				ECFF28561EB029C00056E256 /* ViewController.h */,
 				ECFF28571EB029C00056E256 /* ViewController.m */,
 				ECFF28591EB029C00056E256 /* Main.storyboard */,
+				EC0F97BA1EB02D410049BE6A /* VirtualTourIOSDB.db */,
 				ECFF285C1EB029C00056E256 /* Assets.xcassets */,
 				ECFF285E1EB029C00056E256 /* LaunchScreen.storyboard */,
 				ECFF28611EB029C00056E256 /* Info.plist */,
@@ -147,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECFF287A1EB029C00056E256 /* Build configuration list for PBXNativeTarget "VirtualTour" */;
 			buildPhases = (
+				63B45F4CBBC80F26E844E1A3 /* [CP] Check Pods Manifest.lock */,
 				ECFF28491EB029C00056E256 /* Sources */,
 				ECFF284A1EB029C00056E256 /* Frameworks */,
 				ECFF284B1EB029C00056E256 /* Resources */,
+				0DFB42C1BDFFD17F82938A14 /* [CP] Embed Pods Frameworks */,
+				421D4F90DDB325DC4EBD3F77 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +299,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DFB42C1BDFFD17F82938A14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VirtualTour/Pods-VirtualTour-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		421D4F90DDB325DC4EBD3F77 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VirtualTour/Pods-VirtualTour-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63B45F4CBBC80F26E844E1A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECFF28491EB029C00056E256 /* Sources */ = {
@@ -427,6 +504,7 @@
 		};
 		ECFF287B1EB029C00056E256 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43B65F1AE0090503F9C246F7 /* Pods-VirtualTour.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PC6JL2D29G;
@@ -439,6 +517,7 @@
 		};
 		ECFF287C1EB029C00056E256 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C6E771DB0CCAC1BDBCA1B28 /* Pods-VirtualTour.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PC6JL2D29G;
@@ -518,6 +597,7 @@
 				ECFF287C1EB029C00056E256 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECFF287D1EB029C00056E256 /* Build configuration list for PBXNativeTarget "VirtualTourTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +606,7 @@
 				ECFF287F1EB029C00056E256 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECFF28801EB029C00056E256 /* Build configuration list for PBXNativeTarget "VirtualTourUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +615,7 @@
 				ECFF28821EB029C00056E256 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
