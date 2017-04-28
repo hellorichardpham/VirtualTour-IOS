@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6483EEDC86D27CC8983BFED2 /* Pods_VirtualTour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D0CEFFCE2A8F66546FB4E7 /* Pods_VirtualTour.framework */; };
-		EC0F97BB1EB033110049BE6A /* VirtualTourIOSDB.db in Resources */ = {isa = PBXBuildFile; fileRef = EC0F97BA1EB02D410049BE6A /* VirtualTourIOSDB.db */; };
 		ECFF28521EB029C00056E256 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFF28511EB029C00056E256 /* main.m */; };
 		ECFF28551EB029C00056E256 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFF28541EB029C00056E256 /* AppDelegate.m */; };
 		ECFF28581EB029C00056E256 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFF28571EB029C00056E256 /* ViewController.m */; };
@@ -40,7 +39,7 @@
 		20D0CEFFCE2A8F66546FB4E7 /* Pods_VirtualTour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtualTour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6E771DB0CCAC1BDBCA1B28 /* Pods-VirtualTour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTour.release.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTour/Pods-VirtualTour.release.xcconfig"; sourceTree = "<group>"; };
 		43B65F1AE0090503F9C246F7 /* Pods-VirtualTour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualTour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtualTour/Pods-VirtualTour.debug.xcconfig"; sourceTree = "<group>"; };
-		EC0F97BA1EB02D410049BE6A /* VirtualTourIOSDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = VirtualTourIOSDB.db; sourceTree = "<group>"; };
+		ECC55A681EB2F498009377F5 /* VirtualTourIOSDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = VirtualTourIOSDB.db; sourceTree = "<group>"; };
 		ECFF284D1EB029C00056E256 /* VirtualTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFF28511EB029C00056E256 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECFF28531EB029C00056E256 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,8 +131,8 @@
 				ECFF28561EB029C00056E256 /* ViewController.h */,
 				ECFF28571EB029C00056E256 /* ViewController.m */,
 				ECFF28591EB029C00056E256 /* Main.storyboard */,
-				EC0F97BA1EB02D410049BE6A /* VirtualTourIOSDB.db */,
 				ECFF285C1EB029C00056E256 /* Assets.xcassets */,
+				ECC55A681EB2F498009377F5 /* VirtualTourIOSDB.db */,
 				ECFF285E1EB029C00056E256 /* LaunchScreen.storyboard */,
 				ECFF28611EB029C00056E256 /* Info.plist */,
 				ECFF28501EB029C00056E256 /* Supporting Files */,
@@ -279,7 +278,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC0F97BB1EB033110049BE6A /* VirtualTourIOSDB.db in Resources */,
 				ECFF28601EB029C00056E256 /* LaunchScreen.storyboard in Resources */,
 				ECFF285D1EB029C00056E256 /* Assets.xcassets in Resources */,
 				ECFF285B1EB029C00056E256 /* Main.storyboard in Resources */,
