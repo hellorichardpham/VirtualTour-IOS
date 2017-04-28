@@ -28,11 +28,23 @@ NSMutableArray *listOfMarkers;
     [super viewDidLoad];
     [self setupElements];
     
+    //BUILD PHASES -> BUNDLE RESOURCES(!!!)
+    databasePath = [[NSBundle mainBundle] pathForResource:@"VirtualTourIOSDB" ofType:@"db"];
+    db = [FMDatabase databaseWithPath:databasePath];
+    
+    if (![db open]) {
+        // [db release];   // uncomment this line in manual referencing code; in ARC, this is not necessary/permitted
+        db = nil;
+        NSLog(@"Couldn't find db");
+        return;
+    }
+    
     NSString *query = [NSString stringWithFormat: @"SELECT * FROM VirtualTourIOSDatabase"];
     
     //This query works for specific majors. For now, we will just use everything.
     //NSString *query = [NSString stringWithFormat: @"SELECT * FROM VirtualTourIOSDatabase WHERE major = '%@'", requestedMajor];
     FMResultSet *s = [db executeQuery:query];
+    
     while([s next]) {
         
         //int id = [s intForColumn:@"id"];
@@ -59,15 +71,10 @@ NSMutableArray *listOfMarkers;
 }
     
 - (void) setupElements {
-    databasePath = [[NSBundle mainBundle] pathForResource:@"VirtualTourIOSDB" ofType:@"db"];
-    db = [FMDatabase databaseWithPath:databasePath];
+    //databasePath = [[NSBundle mainBundle] pathForResource:@"VirtualTourIOSDB" ofType:@"db"];
+    //db = [FMDatabase databaseWithPath:databasePath];
     
-    if (![db open]) {
-        // [db release];   // uncomment this line in manual referencing code; in ARC, this is not necessary/permitted
-        db = nil;
-        NSLog(@"Couldn't find db");
-        return;
-    }
+
     
     majorArray = @[@"Graduate Division", @"Computer Science", @"CS: Game Design",
                    @"Computer Engineering", @"Electrical Engineering",
